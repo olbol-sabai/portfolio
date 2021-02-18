@@ -1,0 +1,64 @@
+
+.Bio {
+    padding: 1.5rem 1rem;
+    min-height: 520px;
+}
+
+.TitleOL {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    max-width: 600px;
+    height: 100px;
+    margin: auto;
+}
+
+.Underline {
+    height: 3px;
+    width: 100%;
+}
+
+.Info {
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+.Big {
+    font-size: 30px !important;
+}
+
+.Center {
+    text-align: center;
+}
+
+.Frame {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.InlineStudies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.InlineStudies * {
+    margin: 5px 0;
+}
+
+.ReducedMargin * {
+    margin: 7px 0;
+}
+
+.ScrollFrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    height: fit-content;
+}

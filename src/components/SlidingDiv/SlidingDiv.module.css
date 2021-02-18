@@ -1,0 +1,27 @@
+
+.MainDivContainer {
+    position: relative;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    overflow-x: hidden;
+    height: 3px;
+}
+
+.InitialDiv {
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background-color: #333;
+}
+
+.SecondaryDiv {
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    transform-origin: right;
+    transition: transform 0.7s ease;
+    background-color: var(--light-grey);
+}
