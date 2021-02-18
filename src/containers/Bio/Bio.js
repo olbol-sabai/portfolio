@@ -159,7 +159,7 @@ const Bio = () => {
                                         2017 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#333">
-                                        2018 : 5 month cycling tour, from the north to the south of Chile
+                                        2018 : 6 month, 7000km cycling tour, from the north to the south of Chile
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#333">
                                         2019 : Moved back to Tasmania to continue work in the winery and vineyard
@@ -177,7 +177,7 @@ const Bio = () => {
                             animate="animate"
                             exit="exit">
                             <div className={classes.Info}>
-                                <h4>The technologies I'd like to become proficent in next:</h4>
+                                <h4>Some technologies I'm keen to become proficient in:</h4>
                                 <div className={classes.InlineStudies}>
                                     <p>Docker</p>
                                     <p>&emsp;|&emsp;</p>
