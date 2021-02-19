@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Navbar.module.css';
 import DisappearingContent from '../DisappearingContent/DisappearingContent';
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import { withRouter } from 'react-router-dom'
-import { useEffect } from 'react/cjs/react.development';
 
 
 const Navbar = ({ disappear, history }) => {
