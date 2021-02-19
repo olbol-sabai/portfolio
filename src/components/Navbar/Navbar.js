@@ -20,7 +20,6 @@ const Navbar = ({ disappear, history }) => {
     }
 
     useEffect(() => {
-        console.log(history)
         if (history.location.pathname === '/bio') {
             setClicked(1)
         } else setClicked(0)
