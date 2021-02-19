@@ -24,7 +24,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
     const imageColor = useTransform(x, [0, -200], ['#FFF', '#333'])
     const imageSize = useTransform(x, [0, -100], [1, 1.12])
     const moreInfoOpacity = useTransform(x, [0, -60], [1, 0])
-    const moreInfoPosition = useTransform(x, [0, -60], [290, 250])
+    const moreInfoPosition = useTransform(x, [0, -60], [250, 210])
     const titleColor = useTransform(x, [0, -100], ['#333', '#FFF'])
 
     const [gifDragged, setGifDragged] = useState(false)
@@ -55,7 +55,9 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
 
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             style={{ width: '100vw', position: 'relative' }}>
             <motion.h1
                 initial={{ x: 0, y: 5 }}
@@ -67,8 +69,9 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
 
             </motion.div>)}
             <motion.h5
-                style={{ opacity: moreInfoOpacity, x: moreInfoPosition, zIndex: -1 }}
-            >Drag For More Info</motion.h5>
+                style={{ opacity: moreInfoOpacity, x: moreInfoPosition, zIndex: -1, y: 20 }}
+
+            >{"<<"} Drag Below {"<<"}</motion.h5>
             <motion.h2
                 className={classes.Title}
                 y={titleRise}
@@ -100,10 +103,13 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
                     {details.map((det, i) => (
                         <li key={i}>{det}</li>
                     ))}
-                    <li>Visit <a href={link.link} target="_blank">Demo</a> {link.message}</li>
+                    <li>Visit the <a style={{ color: 'var(--wine)' }}
+                        href={link.link} target="_blank">DEMO</a>
+                        {link.message}
+                    </li>
                 </ul>
             </motion.div>
-        </div >
+        </motion.div>
     );
 }
 

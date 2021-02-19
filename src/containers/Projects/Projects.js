@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useElementScroll, useTransform, useViewportScroll } from 'framer-motion';
 import WPGIF from '../../media/wp1Final.gif';
+import DDGIF from '../../media/dd/alllogos.png';
 import Project from './Project/Project';
 import { motion } from 'framer-motion';
 
@@ -46,9 +47,10 @@ const Projects = () => {
             <Project
                 dragDimensions={-2100}
                 workoutTitle="DullDiary"
-                image={WPGIF}
+                image={DDGIF}
                 link={ddWebLink}
                 details={ddDetails} />
+            <div style={{ height: '100px' }}></div>
         </motion.div>
     );
 }

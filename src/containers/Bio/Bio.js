@@ -10,7 +10,7 @@ const Bio = () => {
     const options = [
         { word: 'Qualifications / Courses', color: 'orangered' },
         { word: 'Past 5 Years', color: 'orangered' },
-        { word: 'Future Goals', color: 'orangered' },
+        { word: 'More', color: 'orangered' },
     ]
 
     const bioVariants = {
@@ -182,7 +182,7 @@ const Bio = () => {
                             animate="animate"
                             exit="exit">
                             <div className={classes.Info}>
-                                <h4>Some technologies I'm keen to become proficient in:</h4>
+                                <h4>Some technologies I'd love to become proficient in:</h4>
                                 <div className={classes.InlineStudies}>
                                     <p>Docker</p>
                                     <p>&emsp;|&emsp;</p>
@@ -193,6 +193,18 @@ const Bio = () => {
                                     <p>Material UI</p>
                                 </div>
                                 <p>I've come to understand that the craft of using different web-based technologies is an ongoing process of improvement, rather than something you simply know or don't. So while I strive to become familiar with more technologies, I also aim to update and refine my current knowledge</p>
+                            </div>
+                            <div className={classes.Info}>
+                                <h4>When I'm not playing around with my computer here are some of the things I get up to in my spare time...</h4>
+                                <div className={classes.InlineStudies}>
+                                    <p>Climbing/ Camping + Hiking</p>
+                                    <p>&emsp;|&emsp;</p>
+                                    <p>Guitar</p>
+                                    <p>&emsp;|&emsp;</p>
+                                    <p>Reading</p>
+                                    <p>&emsp;|&emsp;</p>
+                                    <p>Pub with mates (remember that?!)</p>
+                                </div>
                             </div>
                         </motion.div>}
             </AnimatePresence>

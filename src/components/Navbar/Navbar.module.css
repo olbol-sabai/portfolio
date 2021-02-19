@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 10;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     background-color: var(--light-grey);
     height: 100px;
@@ -33,6 +33,7 @@
 
 .ATag {
     position: relative;
+    cursor: pointer;
 }
 
 .BorderBox{

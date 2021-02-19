@@ -156,16 +156,15 @@ const Landing = ({ history }) => {
                         variants={hiVariant}
                         initial="initial"
                         animate="animate"
-                        className={classes.Words}> Hi, my name is ollie </motion.h2>
+                        className={classes.Words}> Hi, my name is Ollie and I used to make wine. </motion.h2>
                     <motion.h2
                         key="ima"
                         variants={imaVariant}
                         exit="initial"
                         initial="initial"
                         animate="animate"
-                        className={classes.Words}> I'm a winemaker turned junior web developer </motion.h2>
+                        className={classes.Words}> Now I'm an aspiring, self taught web developer </motion.h2>
                     <motion.div
-                        whileHover={{ scale: 1.12 }}
                         key="winepic"
                         variants={wineVariant}
                         initial="initial"
@@ -173,8 +172,10 @@ const Landing = ({ history }) => {
                         style={{ rotate: wineCycle }}
                         className={classes.WineDropImage}
                         onTap={setWineCycle}>
-                        <img height="130px" src={Wine} />
-                        <h1>Enter</h1>
+                        <motion.img
+                            style={{ cursor: 'pointer' }}
+                            whileHover={{ scale: 1.12 }}
+                            height="130px" src={Wine} />
                     </motion.div>
                 </motion.div>
             </div>
