@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import classes from './Navbar.module.css';
 import DisappearingContent from '../DisappearingContent/DisappearingContent';
 import { motion, AnimateSharedLayout } from 'framer-motion';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import GitHubLogo from '../../media/githublogo.png';
 
 
 const Navbar = ({ disappear, history }) => {
@@ -52,6 +53,11 @@ const Navbar = ({ disappear, history }) => {
                 </AnimateSharedLayout>
             </nav>
             <DisappearingContent disappear={disappear} />
+            <div className={classes.GitHubLogo}>
+                <a href="https://github.com/olbol-sabai/" target="_blank" rel="noreferrer">
+                    <img src={GitHubLogo} height="50px" />
+                </a>
+            </div>
         </motion.div >
     );
 }

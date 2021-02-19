@@ -1,19 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useTransform, useViewportScroll, motion, useMotionValue, useElementScroll } from 'framer-motion';
+import { useTransform, useViewportScroll, motion, useMotionValue } from 'framer-motion';
 import classes from './Project.module.css';
 import useWindowWidth from '../../../useWindowWidth';
 
-const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
+
+const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRepoLink }) => {
 
     const { scrollY } = useViewportScroll()
-
-    // const titleFind = useTransform(
-    //     scrollY,
-    //     [0, 500, 600],
-    //     ['0', '0', '1'],
-    //     'ease'
-    // );
-
     const viewportWidth = useWindowWidth()
 
 

@@ -30,7 +30,7 @@ const Projects = () => {
         'Built with ShardsReact - UI kit that extends Bootstraps flexbox system',
         'Static files stored in AWS S3 buckets',
         'Demo deployed with AWS Elastic Beanstalk',
-        'PostgreSQL databse operated by AWS RDS',
+        'PostgreSQL database operated by AWS RDS',
     ]
 
     return (
@@ -40,16 +40,18 @@ const Projects = () => {
             <h1 style={{ paddingLeft: '10px', fontSize: '35px', textAlign: 'center' }}>Demo Projects</h1>
             <Project
                 dragDimensions={-2100}
-                workoutTitle="WorkoutPlanner"
-                image={WPGIF}
-                link={wpWebLink}
-                details={wpDetails} />
-            <Project
-                dragDimensions={-2100}
                 workoutTitle="DullDiary"
                 image={DDGIF}
                 link={ddWebLink}
-                details={ddDetails} />
+                details={ddDetails}
+                githubRepoLink="https://github.com/olbol-sabai/workoutplanner" />
+            <Project
+                dragDimensions={-2100}
+                workoutTitle="WorkoutPlanner"
+                image={WPGIF}
+                link={wpWebLink}
+                details={wpDetails}
+                githubRepoLink="https://github.com/olbol-sabai/dulldiary" />
             <div style={{ height: '100px' }}></div>
         </motion.div>
     );
