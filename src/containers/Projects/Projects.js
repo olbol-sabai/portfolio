@@ -7,14 +7,6 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
 
-    const projectRef = useRef()
-
-
-    useEffect(() => {
-        if (projectRef.current) {
-            console.log(projectRef.current.getBoundingClientRect())
-        }
-    }, [projectRef.current])
 
     const wpWebLink = { message: '- you can use the username "test" and the password "testuser" to authorise', link: 'http://workoutplanner-dev.eu-west-2.elasticbeanstalk.com/' }
     const wpDetails = [
@@ -43,7 +35,6 @@ const Projects = () => {
     return (
         <motion.div
             exit={{ opacity: 0 }}
-            ref={projectRef}
             style={{ padding: '1rem 0rem' }}>
             <h1 style={{ paddingLeft: '10px', fontSize: '35px', textAlign: 'center' }}>Demo Projects</h1>
             <Project

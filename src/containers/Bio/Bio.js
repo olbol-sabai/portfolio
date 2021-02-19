@@ -79,14 +79,18 @@ const Bio = () => {
 
                             <h6><i>While taking a year off work, everything has been funded from savings I earned in order to study. And all courses below have been completed with many, many, many hours of additional work!</i></h6>
 
+                            <h4>Udemy</h4>
                             <table className={classes.ReducedMargin}>
-                                <h4>Udemy</h4>
+                                <thead>
                                 <tr>
                                     <th style={{ textAlign: 'left' }}><h5>Title</h5></th>
                                     <th><h5>Udemy Rating</h5></th>
                                     <th><h5>Students</h5></th>
                                     <th><h5>Duration (hrs)</h5></th>
                                 </tr>
+                                </thead>
+                                <tbody>
+
                                 <tr>
                                     <td><h6>Modern HTML and CSS From The Beginning</h6></td>
                                     <td><h6>4.7</h6></td>
@@ -123,6 +127,7 @@ const Bio = () => {
                                     <td><h6>900</h6></td>
                                     <td><h6>11</h6></td>
                                 </tr>
+                                </tbody>
                             </table>
                             <h4>Other</h4>
                             <div className={classes.ReducedMargin}>

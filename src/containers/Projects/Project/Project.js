@@ -97,8 +97,8 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link }) => {
                 y={detailsFall}
                 style={{ display: 'flex', width: '95%' }}>
                 <ul style={{ margin: 'auto' }}>
-                    {details.map(det => (
-                        <li>{det}</li>
+                    {details.map((det, i) => (
+                        <li key={i}>{det}</li>
                     ))}
                     <li>Visit <a href={link.link} target="_blank">Demo</a> {link.message}</li>
                 </ul>

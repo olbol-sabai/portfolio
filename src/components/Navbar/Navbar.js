@@ -33,24 +33,22 @@ const Navbar = ({ disappear, history }) => {
             <nav style={{ height: '100px' }} className={classes.Links} >
                 <AnimateSharedLayout transition={{ duration: 2 }}>
                     {links.map(({ to, title }, i) => (
-                        <>
-                            <motion.a
-                                onClick={() => pageHandler(i, to)}
-                                key={i}
-                                className={classes.ATag}
-                                to={to}>
-                                <div style={clicked === i ? { fontWeight: 600 } : null}>
-                                    {title}
-                                </div>
-                                {clicked === i ?
-                                    <motion.div
-                                        layoutId="yo"
-                                        y={-23}
-                                        className={classes.BorderBox}>
-                                    </motion.div> : null
-                                }
-                            </motion.a>
-                        </>
+                        <motion.a
+                            key={i}
+                            onClick={() => pageHandler(i, to)}
+                            className={classes.ATag}
+                            to={to}>
+                            <div style={clicked === i ? { fontWeight: 600 } : null}>
+                                {title}
+                            </div>
+                            {clicked === i ?
+                                <motion.div
+                                    layoutId="yo"
+                                    y={-23}
+                                    className={classes.BorderBox}>
+                                </motion.div> : null
+                            }
+                        </motion.a>
                     ))}
                 </AnimateSharedLayout>
             </nav>
