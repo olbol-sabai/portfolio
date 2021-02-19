@@ -104,7 +104,6 @@ const Landing = ({ history }) => {
             transition={{ duration: 1 }}
             exit={{ opacity: 0 }}
             className={classes.Landing}>
-            <Redirect to="/projects" />
             <div className={classes.DescContainer}>
                 <motion.svg
                     key="SVG"
