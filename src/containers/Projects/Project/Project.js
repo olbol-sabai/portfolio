@@ -35,14 +35,16 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     useEffect(() => {
         return () => {
             document.querySelector("html").classList.remove(classes.NoScroll)
+            document.querySelector("body").classList.remove(classes.NoScroll)
         }
     }, [])
     useEffect(() => {
-        let thisPage = document.querySelector("html")
         if (hideBG) {
-            thisPage.classList.remove(classes.NoScroll)
+            document.querySelector("body").classList.remove(classes.NoScroll)
+            document.querySelector("html").classList.remove(classes.NoScroll)
         } else {
-            thisPage.classList.add(classes.NoScroll)
+            document.querySelector("body").classList.add(classes.NoScroll)
+            document.querySelector("html").classList.add(classes.NoScroll)
         }
     }, [hideBG])
 
