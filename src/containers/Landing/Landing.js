@@ -4,7 +4,10 @@ import { motion, useCycle, AnimatePresence } from 'framer-motion';
 import Wine from '../../media/wine.png';
 import LogoSVG from '../../media/logoSVG.svg';
 import { useLocation } from 'react-use';
-import { Redirect, withRouter } from 'react-router'
+import { Redirect, withRouter } from 'react-router';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../../components/FontAwesome/FontAwesome';
+
 
 const imaVariant = {
     initial: {
@@ -82,27 +85,21 @@ const logoVariant = {
 
 const Landing = ({ history }) => {
 
-    const [wineCycle, setWineCycle] = useCycle(
-        0, 30, 60, 90
-    )
 
     const [startExit, setStartExit] = useState(false)
 
-
     useEffect(() => {
-        if (startExit) setWineCycle(90)
-        if (wineCycle === 90) {
             setTimeout(() => {
                 setStartExit(true)
                 history.push({ pathname: '/projects' })
-            }, 600)
-        }
-    }, [wineCycle])
+            }, 7000)
+    }, [])
 
     return (
         <motion.div
             transition={{ duration: 1 }}
             exit={{ opacity: 0 }}
+            y={-20}
             className={classes.Landing}>
             <div className={classes.DescContainer}>
                 <motion.svg
@@ -164,19 +161,19 @@ const Landing = ({ history }) => {
                         initial="initial"
                         animate="animate"
                         className={classes.Words}> Now I'm an aspiring, self taught web developer </motion.h2>
+                    <div>
                     <motion.div
                         key="winepic"
                         variants={wineVariant}
                         initial="initial"
                         animate="animate"
-                        style={{ rotate: wineCycle }}
-                        className={classes.WineDropImage}
-                        onTap={setWineCycle}>
+                            className={classes.WineDropImage}>
                         <motion.img
                             style={{ cursor: 'pointer' }}
                             whileHover={{ scale: 1.12 }}
                             height="130px" src={Wine} />
                     </motion.div>
+                    </div>
                 </motion.div>
             </div>
         </motion.div >

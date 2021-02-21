@@ -35,15 +35,15 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     useEffect(() => {
         return () => {
             document.querySelector("html").classList.remove(classes.NoScroll)
-            document.querySelector("body").classList.remove(classes.NoScroll)
+            document.ontouchmove = () => { return true; }            
         }
     }, [])
     useEffect(() => {
         if (hideBG) {
-            document.querySelector("body").classList.remove(classes.NoScroll)
+            document.ontouchmove = () => { return true; }            
             document.querySelector("html").classList.remove(classes.NoScroll)
         } else {
-            document.querySelector("body").classList.add(classes.NoScroll)
+            document.ontouchmove = e => e.preventDefault();
             document.querySelector("html").classList.add(classes.NoScroll)
         }
     }, [hideBG])
