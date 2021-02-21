@@ -38,7 +38,8 @@ const Bio = () => {
                             animate
                             className={classes.Center}
                             onClick={() => setSelected(index)}
-                            style={selected === index ? { color } : { scale: .5 }}>
+                            style={selected === index ? { color } : { scale: .5 }}
+                            x={-5}>
                             {word}
                             {index === selected && (
                                 <motion.div

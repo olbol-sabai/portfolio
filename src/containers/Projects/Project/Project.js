@@ -17,7 +17,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     const imageColor = useTransform(x, [0, -200], ['#FFF', '#333'])
     const imageSize = useTransform(x, [0, -100], [1, 1.12])
     const moreInfoOpacity = useTransform(x, [0, -60], [1, 0])
-    const moreInfoPosition = useTransform(x, [0, -60], [250, 210])
+    const moreInfoPosition = useTransform(x, [0, -60], [200, 190])
     const titleColor = useTransform(x, [0, -100], ['#333', '#FFF'])
 
     const [gifDragged, setGifDragged] = useState(false)
@@ -63,8 +63,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
             </motion.div>)}
             <motion.h5
                 style={{ opacity: moreInfoOpacity, x: moreInfoPosition, zIndex: -1, y: 20 }}
-
-            >{"<<"} Drag Below {"<<"}</motion.h5>
+                >{"<<"} Drag Below {"<<"}</motion.h5>
             <motion.h2
                 className={classes.Title}
                 y={titleRise}
