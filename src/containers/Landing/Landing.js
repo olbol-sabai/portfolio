@@ -95,7 +95,7 @@ const Landing = ({ history }) => {
             }, 13000)
         setTimeout(() => {
             setCurrentPic(WINEPNG)
-        }, 9000)
+        }, 8500)
     }, [])
 
     return (
@@ -108,6 +108,7 @@ const Landing = ({ history }) => {
                 <motion.svg
                     key="SVG"
                     x={-10}
+                    scale={0.8}
                     style={startExit && { opacity: 0 }}
                     className={classes.SVG}
                     viewBox="0 0 100 100">
@@ -156,13 +157,13 @@ const Landing = ({ history }) => {
                         variants={hiVariant}
                         initial="initial"
                         animate="animate"
-                        className={classes.Words}> Hi, my name is Ollie and I used to make wine. </motion.h2>
+                        className={classes.Words}> Hi, my name is Ollie. I used to make wine. </motion.h2>
                     <motion.div
                         key="winepic"
                         variants={wineVariant}
                         initial="initial"
                         animate="animate"
-                        x={-10}
+                        x={-13}
                         className={classes.WineDropImage}>
                         <motion.img
                             style={{ cursor: 'pointer' }}
