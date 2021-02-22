@@ -55,9 +55,10 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
             animate={{ opacity: 1 }}
             style={{ width: '100vw', position: 'relative' }}>
             <motion.h1
+                style={{ margin: '0px' }}
                 initial={{ x: 0, y: 5 }}
                 x={titleRise}
-            >. . . . . . . . . . . . . . . . . . . .</motion.h1>
+            >. . . . . . . . . . . . . . . . . . .</motion.h1>
             {!hideBG && (<motion.div
                 className={classes.Background}
                 style={{ backgroundColor: imageColor }}>

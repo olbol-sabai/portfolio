@@ -39,7 +39,8 @@ const Projects = () => {
         <motion.div
             exit={{ opacity: 0 }}
             style={{ padding: '1rem 0rem' }}>
-            <h1 style={{ paddingLeft: '10px', fontSize: '35px', textAlign: 'center' }}>Demo Projects</h1>
+            <h1
+                style={{ paddingLeft: '10px', fontSize: '35px', textAlign: 'center', margin: '5px' }}>Demo Projects</h1>
             <Project
                 dragDimensions={-1950}
                 workoutTitle="DullDiary"

@@ -19,13 +19,14 @@
 
 .Words {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
 }
 
 .WineDropImage {
     height: 100px;
+    margin-bottom: 40px;
 }
 
 .SVG {

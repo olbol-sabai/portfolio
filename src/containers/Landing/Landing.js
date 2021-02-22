@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Landing.module.css';
 import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import Wine from '../../media/wine.png';
 import LogoSVG from '../../media/logoSVG.svg';
-import { useLocation } from 'react-use';
 import { Redirect, withRouter } from 'react-router';
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import Icon from '../../components/FontAwesome/FontAwesome';
+
+import WINEPNG from '../../media/pixelate.gif';
+import WINESTILL from '../../media/winebottle.jpg';
 
 
 const imaVariant = {
@@ -16,7 +15,7 @@ const imaVariant = {
     animate: {
         transition: {
             duration: 2,
-            delay: 2,
+            delay: 6,
         },
         opacity: 1
     },
@@ -32,7 +31,7 @@ const wineVariant = {
     animate: {
         transition: {
             duration: 1,
-            delay: 3.5,
+            delay: 4,
         },
         opacity: 1,
         rotate: 0
@@ -49,8 +48,8 @@ const hiVariant = {
         opacity: 0
     },
     animate: {
-        transition: { duration: 1 },
-        opacity: 1
+        transition: { duration: 1, delay: 2.7 },
+        opacity: 1,
     },
     exit: {
         opacity: 0, transition: { delay: 0.5 }
@@ -87,12 +86,16 @@ const Landing = ({ history }) => {
 
 
     const [startExit, setStartExit] = useState(false)
+    const [currentPic, setCurrentPic] = useState(WINESTILL)
 
     useEffect(() => {
             setTimeout(() => {
                 setStartExit(true)
                 history.push({ pathname: '/projects' })
-            }, 7000)
+            }, 13000)
+        setTimeout(() => {
+            setCurrentPic(WINEPNG)
+        }, 9000)
     }, [])
 
     return (
@@ -154,6 +157,18 @@ const Landing = ({ history }) => {
                         initial="initial"
                         animate="animate"
                         className={classes.Words}> Hi, my name is Ollie and I used to make wine. </motion.h2>
+                    <motion.div
+                        key="winepic"
+                        variants={wineVariant}
+                        initial="initial"
+                        animate="animate"
+                        x={-10}
+                        className={classes.WineDropImage}>
+                        <motion.img
+                            style={{ cursor: 'pointer' }}
+                            whileHover={{ scale: 1.12 }}
+                            height="130px" src={currentPic} />
+                    </motion.div>
                     <motion.h2
                         key="ima"
                         variants={imaVariant}
@@ -161,19 +176,6 @@ const Landing = ({ history }) => {
                         initial="initial"
                         animate="animate"
                         className={classes.Words}> Now I'm an aspiring, self taught web developer </motion.h2>
-                    <div>
-                    <motion.div
-                        key="winepic"
-                        variants={wineVariant}
-                        initial="initial"
-                        animate="animate"
-                            className={classes.WineDropImage}>
-                        <motion.img
-                            style={{ cursor: 'pointer' }}
-                            whileHover={{ scale: 1.12 }}
-                            height="130px" src={Wine} />
-                    </motion.div>
-                    </div>
                 </motion.div>
             </div>
         </motion.div >
