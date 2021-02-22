@@ -162,7 +162,7 @@ const Bio = () => {
                                         2015 : Graduated from Uni, completely uninspired by my course, saved up some money and flew to NZ with a friend
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={100} radius={30} background="#333">
-                                        2017 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
+                                        2016 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#333">
                                         2018 : 6 month, 7000km cycling tour, from the north to the south of Chile
