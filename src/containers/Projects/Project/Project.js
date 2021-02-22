@@ -76,8 +76,9 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 x={x}
                 drag={"x"}
                 dragElastic={0.3}
+                dragMomentum={0.2}
                 dragTransition={{
-                    bounceStiffness: 100, bounceDamping: 25, power: 0.45, timeConstant: 500
+                    bounceStiffness: 200, bounceDamping: 20, power: 0.45, timeConstant: 500
                 }}
                 dragConstraints={{ left: dragDimensions + -360 + viewportWidth, right: 0 }}
                 className={classes.DraggableImage}
