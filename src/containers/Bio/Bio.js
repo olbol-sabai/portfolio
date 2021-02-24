@@ -159,7 +159,7 @@ const Bio = () => {
                             <div className={classes.ScrollFrame}>
                                 <Scroll height={320} width={300} background="#FFF" color="#FFF" style={{ fontSize: '13px' }}>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
-                                        2015 : Graduated from Uni, completely uninspired by my course, saved up some money and flew to NZ with a friend
+                                        2015 : Graduated from Uni - completely uninspired by my course I worked to save up some money and flew to NZ with a friend
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={100} radius={30} background="#333">
                                         2016 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
@@ -172,6 +172,9 @@ const Bio = () => {
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
                                         Early 2020 : Came back to the UK to focus on Web Development and officially became a year-long hermit
+                                    </Frame>
+                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
+                                        February 2021 : Began looking for jobs. Also following courses on advanced Git/Github and SQL databases
                                     </Frame>
                                 </Scroll>
                             </div>
