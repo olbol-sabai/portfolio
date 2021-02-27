@@ -20,9 +20,8 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     const imageColor = useTransform(x, [0, -200], ['#FFF', '#333'])
     const imageSize = useTransform(x, [0, -100], [1, 1.12])
     const whiteSpacePosition = useTransform(x, [0, -30], [0, 140])
-    const moreInfoOpacity = useTransform(x, [0, -60], [1, 0])
-    const moreInfoPosition = useTransform(x, [0, -60], [200, 190])
     const titleColor = useTransform(x, [0, -100], ['#333', '#FFF'])
+    const closeOpacity = useTransform(x, [0, -100], [0, 1])
     const [gifDragged, setGifDragged] = useState(false)
     const [hideBG, setHideBG] = useState(true)
     const progressBarRef = useRef()
@@ -51,12 +50,18 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
         }
     }, [hideBG])
 
+    const close = () => {
+        x.stop()
+        console.log('tapping')
+        x.set(0)
+    }
+
 
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            style={{ width: '100vw', position: 'relative', paddingBottom: '3rem', paddingTop: '1rem' }}>
+            style={{ width: '100vw', paddingBottom: '3rem', paddingTop: '1rem', position: 'relative' }}>
             {!hideBG && (<motion.div
                 className={classes.Background}
                 style={{ backgroundColor: imageColor }}>
@@ -68,7 +73,8 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 x={40}
                 style={{ color: titleColor }}
             >{workoutTitle}</motion.h2>
-            <div style={{ position: 'relative' }}>
+
+            <motion.div opacity={closeOpacity} onClick={close} className={classes.CloseIcon}>X</motion.div>
             <motion.img
                 x={x}
                 drag={"x"}
@@ -92,8 +98,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                     className={classes.ImageDivRight}>
                     <Icon icon={faChevronRight} />
                     <Icon icon={faChevronRight} />
-                </motion.div>
-            </div>
+            </motion.div>
             <div ref={progressBarRef} className={classes.DragProgressBarOuter}>
                 <motion.div
                     y={-1}

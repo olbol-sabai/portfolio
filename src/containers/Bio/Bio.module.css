@@ -40,7 +40,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding-left: 1.8rem;
+}
+
+.KeySkills {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.KeySkills * {
+    margin: 0;
 }
 
 .InlineStudies {
@@ -66,10 +78,18 @@
     height: fit-content;
 }
 
+.Scroll {
+    font-size: 13px;
+    padding: 25px;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+
 .Dot {
     position: absolute;
-    top: 40%;
-    left: -3px;
+    top: 25%;
+    left: 3px;
     width: 5px;
     height: 5px;
     background: #333;

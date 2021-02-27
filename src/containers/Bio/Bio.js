@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AnimateSharedLayout, motion, AnimatePresence } from 'framer-motion';
 import { Scroll, Frame, Page } from 'framer';
 import classes from './Bio.module.css';
@@ -61,7 +61,45 @@ const Bio = () => {
                         animate="animate"
                         exit="exit">
                         <div className={classes.Info}>
-                            <h3>Non WebDev Related</h3>
+                            <h3>Key Skills</h3>
+                            <ul className={classes.KeySkills}>
+
+                                <li>
+                                    <h5>Python</h5>
+                                </li>
+                                <li>
+                                    <h5>Django</h5>
+                                </li>
+                                <li>
+                                    <h5>DjangoRestFramework</h5>
+                                </li>
+                                <li>
+                                    <h5>HTML</h5>
+                                </li>
+                                <li>
+                                    <h5>CSS</h5>
+                                </li>
+                                <li>
+                                    <h5>Bootstrap</h5>
+                                </li>
+                                <li>
+                                    <h5>Javascript</h5>
+                                </li>
+                                <li>
+                                    <h5>React</h5>
+                                </li>
+                                <li>
+                                    <h5>SQL/ POSTGRESQL</h5>
+                                </li>
+                                <li>
+                                    <h5>GIT / GITHUB</h5>
+                                </li>
+                            </ul>
+                            <br />
+                            <hr />
+                            <br />
+
+                            <h3>Non WebDev Related Studies</h3>
                             <div className={classes.InlineStudies}>
                                 <h4>A-Levels</h4>
                                 <h5>Maths: A</h5>
@@ -76,7 +114,7 @@ const Bio = () => {
                             <br />
                             <hr />
                             <br />
-                            <h3>WebDev Related</h3>
+                            <h3>WebDev Related Studies</h3>
 
                             <h6><i>While taking a year off work, everything has been funded from savings I earned in order to study. And all courses below have been completed with many, many, many hours of additional work!</i></h6>
 
@@ -145,7 +183,7 @@ const Bio = () => {
                                 <h6>- NetNinja YouTube channel for everything Corey hasn't done</h6>
                                 <h6>- The StackOverflow online community, and their answers to the questions I feel dumb asking</h6>
                                 <h6>- Medium.com for playtime</h6>
-                                <h6>- VSCode for just being great (I can't not mention the BracketPairColorizer extension!!)</h6>
+                                <h6>- VSCode for just being great (shout out to the BracketPairColorizer extension!!)</h6>
                             </div>
                         </div>
                     </motion.div> :
@@ -157,7 +195,7 @@ const Bio = () => {
                             animate="animate"
                             exit="exit">
                             <div className={classes.ScrollFrame}>
-                                <Scroll height={320} width={340} background="#FFF" color="#333" style={{ fontSize: '13px', border: '#333 solid 2px', padding: '25px' }}>
+                                <Scroll height={360} width={340} background="#FFF" color="#333" className={classes.Scroll}>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
                                         2015 : Graduated from Uni - completely uninspired by my course I worked to save up some money and flew to NZ with a friend
                                         <div className={classes.Dot}></div>
