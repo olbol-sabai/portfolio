@@ -20,7 +20,10 @@
     height: 300px;
     margin-left: 50px;
     border: solid 2px #333;
-    box-shadow: 0 0 10px 1px #999
+}
+.DraggableImageHover {
+    box-shadow: 0 0 10px 1px #999;
+    transition: box-shadow 0.2s ease;
 }
 
 .DraggableImage:hover {
@@ -63,12 +66,35 @@
     z-index: 7;
     margin: 50px auto;
     width: 300px;
-    height: 3px;
+    height: 2px;
     position: relative;
     background-color: #999;
+    padding: 4px;
+    border-radius: 4px;
 } 
 
 .DragProgressBar {
-    height: 3px;
+    height: 2px;
+    border-radius: 2px;
     background-color: #FFF;
+}
+
+.ImageDivLeft {
+    height: 300px; 
+    width: 75px;
+    background: ;
+    position: absolute;
+    top: 0
+}
+
+.ImageDivRight {
+    height: 350px; 
+    width: 105px;
+    background-image: linear-gradient(to left, white ,  white, white, transparent);
+    position: absolute;
+    top: 20;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

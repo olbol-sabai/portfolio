@@ -157,24 +157,30 @@ const Bio = () => {
                             animate="animate"
                             exit="exit">
                             <div className={classes.ScrollFrame}>
-                                <Scroll height={320} width={300} background="#FFF" color="#FFF" style={{ fontSize: '13px' }}>
-                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
+                                <Scroll height={320} width={340} background="#FFF" color="#333" style={{ fontSize: '13px', border: '#333 solid 2px', padding: '25px' }}>
+                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
                                         2015 : Graduated from Uni - completely uninspired by my course I worked to save up some money and flew to NZ with a friend
+                                        <div className={classes.Dot}></div>
                                     </Frame>
-                                    <Frame center="x" className={classes.Frame} size={300} height={100} radius={30} background="#333">
+                                    <Frame center="x" className={classes.Frame} size={300} height={100} radius={30} background="#FFF">
                                         2016 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
+                                        <div className={classes.Dot}></div>
                                     </Frame>
-                                    <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#333">
+                                    <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#FFF">
                                         2018 : 6 month, 7000km cycling tour, from the north to the south of Chile
+                                        <div className={classes.Dot}></div>
                                     </Frame>
-                                    <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#333">
+                                    <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#FFF">
                                         2019 : Moved back to Tasmania to continue work in the winery and vineyard
+                                        <div className={classes.Dot}></div>
                                     </Frame>
-                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
+                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
                                         Early 2020 : Came back to the UK to focus on Web Development and officially became a year-long hermit
+                                        <div className={classes.Dot}></div>
                                     </Frame>
-                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#333">
-                                        February 2021 : Began looking for jobs. Also following courses on advanced Git/Github and SQL databases
+                                    <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
+                                        February 2021 : Began the job hunt. Currently following courses on advanced Git/Github and SQL databases
+                                        <div className={classes.Dot}></div>
                                     </Frame>
                                 </Scroll>
                             </div>
@@ -186,7 +192,7 @@ const Bio = () => {
                             animate="animate"
                             exit="exit">
                             <div className={classes.Info}>
-                                <h4>Some technologies I'd love to become proficient in:</h4>
+                                <h4>Some technologies on my "to learn" list:</h4>
                                 <div className={classes.InlineStudies}>
                                     <p>Docker</p>
                                     <p>&emsp;|&emsp;</p>

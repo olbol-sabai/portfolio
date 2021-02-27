@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useTransform, useViewportScroll, motion, useMotionValue } from 'framer-motion';
+import { useTransform, useViewportScroll, motion, useMotionValue, useSpring } from 'framer-motion';
 import classes from './Project.module.css';
 import useWindowWidth from '../../../useWindowWidth';
+import Icon from '../../../components/FontAwesome/FontAwesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRepoLink }) => {
 
+    const [imageHovering, setImageHovering] = useState(false)
     const { scrollY } = useViewportScroll()
     const viewportWidth = useWindowWidth()
 
@@ -13,13 +16,13 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     const x = useMotionValue(0)
     const titleRise = useTransform(x, [0, -100], ['0px', '-35px'], 'ease');
     const detailsFall = useTransform(x, [0, -100], ['0px', '35px'], 'ease');
-    const imageWidth = useTransform(x, [0, dragDimensions + viewportWidth - 360], [0, 300])
+    const imageWidth = useTransform(x, [0, dragDimensions + viewportWidth - 360], [20, 293])
     const imageColor = useTransform(x, [0, -200], ['#FFF', '#333'])
     const imageSize = useTransform(x, [0, -100], [1, 1.12])
+    const whiteSpacePosition = useTransform(x, [0, -30], [0, 140])
     const moreInfoOpacity = useTransform(x, [0, -60], [1, 0])
     const moreInfoPosition = useTransform(x, [0, -60], [200, 190])
     const titleColor = useTransform(x, [0, -100], ['#333', '#FFF'])
-
     const [gifDragged, setGifDragged] = useState(false)
     const [hideBG, setHideBG] = useState(true)
     const progressBarRef = useRef()
@@ -53,41 +56,47 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            style={{ width: '100vw', position: 'relative' }}>
-            <motion.h1
-                style={{ margin: '0px' }}
-                initial={{ x: 0, y: 5 }}
-                x={titleRise}
-            >. . . . . . . . . . . . . . . . . . .</motion.h1>
+            style={{ width: '100vw', position: 'relative', paddingBottom: '3rem', paddingTop: '1rem' }}>
             {!hideBG && (<motion.div
                 className={classes.Background}
                 style={{ backgroundColor: imageColor }}>
 
             </motion.div>)}
-            <motion.h5
-                style={{ opacity: moreInfoOpacity, x: moreInfoPosition, zIndex: -1, y: 20 }}
-                >{"<<"} Drag Below {"<<"}</motion.h5>
             <motion.h2
                 className={classes.Title}
                 y={titleRise}
+                x={40}
                 style={{ color: titleColor }}
             >{workoutTitle}</motion.h2>
+            <div style={{ position: 'relative' }}>
             <motion.img
                 x={x}
                 drag={"x"}
                 dragElastic={0.3}
+                    onHoverStart={() => setImageHovering(true)}
+                    onHoverEnd={() => setImageHovering(false)}
                 dragMomentum={0.2}
                 dragTransition={{
                     bounceStiffness: 200, bounceDamping: 20, power: 0.45, timeConstant: 500
                 }}
                 dragConstraints={{ left: dragDimensions + -360 + viewportWidth, right: 0 }}
-                className={classes.DraggableImage}
+                    className={[classes.DraggableImage, (imageHovering && classes.DraggableImageHover)].join(" ")}
                 transition={{ ease: 'ease' }}
                 style={{ scale: imageSize }}
                 src={image}
                 alt="planner" />
+
+                <motion.div
+                    y={-330}
+                    x={whiteSpacePosition}
+                    className={classes.ImageDivRight}>
+                    <Icon icon={faChevronRight} />
+                    <Icon icon={faChevronRight} />
+                </motion.div>
+            </div>
             <div ref={progressBarRef} className={classes.DragProgressBarOuter}>
                 <motion.div
+                    y={-1}
                     className={classes.DragProgressBar}
                     style={{ width: imageWidth }}>
                 </motion.div>
