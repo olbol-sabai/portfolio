@@ -14,8 +14,8 @@ const imaVariant = {
     },
     animate: {
         transition: {
-            duration: 2,
-            delay: 6,
+            duration: 1,
+            delay: 5,
         },
         opacity: 1
     },
@@ -92,10 +92,10 @@ const Landing = ({ history }) => {
             setTimeout(() => {
                 setStartExit(true)
                 history.push({ pathname: '/projects' })
-            }, 13000)
+            }, 11000)
         setTimeout(() => {
             setCurrentPic(WINEPNG)
-        }, 8500)
+        }, 7000)
     }, [])
 
     return (
@@ -163,7 +163,7 @@ const Landing = ({ history }) => {
                         variants={wineVariant}
                         initial="initial"
                         animate="animate"
-                        x={-13}
+                        x={-8}
                         className={classes.WineDropImage}>
                         <motion.img
                             style={{ cursor: 'pointer' }}

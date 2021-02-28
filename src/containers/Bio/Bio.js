@@ -194,7 +194,7 @@ const Bio = () => {
                             initial="initial"
                             animate="animate"
                             exit="exit">
-                            <div className={classes.ScrollFrame}>
+                            <div className={classes.ScrollFrame} >
                                 <Scroll height={360} width={340} background="#FFF" color="#333" className={classes.Scroll}>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
                                         2015 : Graduated from Uni - completely uninspired by my course I worked to save up some money and flew to NZ with a friend

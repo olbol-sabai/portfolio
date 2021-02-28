@@ -19,7 +19,6 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
     const imageWidth = useTransform(x, [0, dragDimensions + viewportWidth - 360], [20, 293])
     const imageColor = useTransform(x, [0, -200], ['#FFF', '#333'])
     const imageSize = useTransform(x, [0, -100], [1, 1.12])
-    const whiteSpacePosition = useTransform(x, [0, -30], [0, 140])
     const titleColor = useTransform(x, [0, -100], ['#333', '#FFF'])
     const closeOpacity = useTransform(x, [0, -100], [0, 1])
     const [gifDragged, setGifDragged] = useState(false)
@@ -40,6 +39,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
             document.ontouchmove = () => { return true; }            
         }
     }, [])
+
     useEffect(() => {
         if (hideBG) {
             document.ontouchmove = () => { return true; }            
@@ -61,7 +61,7 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            style={{ width: '100vw', paddingBottom: '3rem', paddingTop: '1rem', position: 'relative' }}>
+            style={{ width: '100vw', paddingBottom: '3rem', paddingTop: '2rem', position: 'relative' }}>
             {!hideBG && (<motion.div
                 className={classes.Background}
                 style={{ backgroundColor: imageColor }}>
@@ -74,7 +74,11 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 style={{ color: titleColor }}
             >{workoutTitle}</motion.h2>
 
-            <motion.div opacity={closeOpacity} onClick={close} className={classes.CloseIcon}>X</motion.div>
+            <motion.div
+                y={15}
+                opacity={closeOpacity}
+                onClick={close}
+                className={classes.CloseIcon}>X</motion.div>
             <motion.img
                 x={x}
                 drag={"x"}
@@ -92,13 +96,13 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 src={image}
                 alt="planner" />
 
-                <motion.div
-                    y={-330}
-                    x={whiteSpacePosition}
+            {!imageHovering && hideBG &&
+                (<motion.div
+                    y={-310}
                     className={classes.ImageDivRight}>
                     <Icon icon={faChevronRight} />
                     <Icon icon={faChevronRight} />
-            </motion.div>
+                </motion.div>)}
             <div ref={progressBarRef} className={classes.DragProgressBarOuter}>
                 <motion.div
                     y={-1}
@@ -110,13 +114,13 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 y={detailsFall}
                 style={{ display: 'flex', width: '95%' }}>
                 <ul style={{ margin: 'auto' }}>
-                    {details.map((det, i) => (
-                        <li key={i}>{det}</li>
-                    ))}
                     <li>Visit the <a style={{ color: 'var(--wine)' }}
                         href={link.link} target="_blank">DEMO</a>
                         {link.message}
                     </li>
+                    {details.map((det, i) => (
+                        <li key={i}>{det}</li>
+                    ))}
                 </ul>
             </motion.div>
         </motion.div>
