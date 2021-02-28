@@ -96,13 +96,16 @@ const Project = ({ workoutTitle, dragDimensions, image, details, link, githubRep
                 src={image}
                 alt="planner" />
 
-            {!imageHovering && hideBG &&
-                (<motion.div
-                    y={-310}
+            {hideBG && (<motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{ repeat: Infinity, duration: 2, repeatType: "reverse", }}
+                y={-180}
+                opacity={imageHovering ? "0" : "1"}
                     className={classes.ImageDivRight}>
                     <Icon icon={faChevronRight} />
                     <Icon icon={faChevronRight} />
-                </motion.div>)}
+            </motion.div>)}
             <div ref={progressBarRef} className={classes.DragProgressBarOuter}>
                 <motion.div
                     y={-1}
