@@ -197,19 +197,19 @@ const Bio = () => {
                             <div className={classes.ScrollFrame} >
                                 <Scroll height={360} width={340} background="#FFF" color="#333" className={classes.Scroll}>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
-                                        2015 : Graduated from Uni - completely uninspired by my course I worked to save up some money and flew to NZ with a friend
+                                        2015 : Graduated from University - completely uninspired by my course I worked to save up some money and flew to NZ with a friend
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={100} radius={30} background="#FFF">
-                                        2016 : Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
+                                        June 2017 - June 2018 :  Moved to Tasmania to follow a lifelong ambition of making wine, while saving up money to study Viticulture
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#FFF">
-                                        2018 : 6 month, 7000km cycling tour, from the north to the south of Chile
+                                        June 2018 : 6 month, 7000km cycling tour, from the north to the south of Chile
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={70} radius={30} background="#FFF">
-                                        2019 : Moved back to Tasmania to continue work in the winery and vineyard
+                                        January 2019 - January 2020: Moved back to Tasmania to continue work in the winery and vineyard
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
@@ -217,7 +217,7 @@ const Bio = () => {
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                     <Frame center="x" className={classes.Frame} size={300} height={90} radius={30} background="#FFF">
-                                        February 2021 : Began the job hunt. Currently following courses on advanced Git/Github and SQL databases
+                                        February 2021 - current : Began the job hunt. Currently following courses on advanced Git/Github and SQL databases
                                         <div className={classes.Dot}></div>
                                     </Frame>
                                 </Scroll>
